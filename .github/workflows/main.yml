@@ -12,4 +12,6 @@ jobs:
         with:
           python-version: '3.10.4'
       - name: Run Python Script
-        run: python3 hello.py
+        run: 
+          pip install -r requirements.txt
+          python3 hello.py
