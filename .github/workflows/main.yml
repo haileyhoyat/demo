@@ -13,5 +13,6 @@ jobs:
           python-version: '3.10.4'
       - name: Run Python Script
         run: 
+          pip install --upgrade pip
           pip install -r requirements.txt
           python3 hello.py
