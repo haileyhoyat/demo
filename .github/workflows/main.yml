@@ -7,14 +7,11 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - name: Setup Python and Chrome
+        uses: actions/setup-python@v4 browser-actions/setup-chrome@v1
         with:
           python-version: '3.10.4'
-      - name: Install Google Chrome
-        run:
-          chmod +x ./scripts/InstallChrome.sh
-          ./scripts/InstallChrome.sh 
       - name: Run Python Script
         run: 
+          chrome --version
           python3 hello.py
